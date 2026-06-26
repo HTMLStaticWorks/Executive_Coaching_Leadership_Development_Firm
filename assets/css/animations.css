@@ -1,0 +1,90 @@
+/* Premium Animations & Micro-Interactions */
+
+/* Fade In Up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeInUp 1s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+}
+
+/* Subtle Zoom on Hover */
+.zoom-hover {
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.zoom-hover:hover {
+  transform: scale(1.03);
+}
+
+/* Text reveal */
+.text-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Accent slide */
+.btn-premium {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-premium::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: var(--accent-color);
+  z-index: -1;
+  transition: height 0.3s ease;
+}
+
+.btn-premium:hover::after {
+  height: 100%;
+}
+
+.btn-premium-accent::after {
+  background-color: var(--primary-color);
+}
+
+/* Page transitions */
+.page-fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Micro hover for links */
+.hover-underline {
+  position: relative;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+}

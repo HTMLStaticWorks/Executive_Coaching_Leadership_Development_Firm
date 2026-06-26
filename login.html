@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure administrative and executive portal login page for Aurelius clients.">
+  <title>Aurelius | Secure Client Portal Login</title>
+  
+
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C59D5F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/%3E%3Cline x1='12' y1='8' x2='12' y2='16'/%3E%3Cline x1='9' y1='12' x2='15' y2='12'/%3E%3C/svg%3E">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  
+  <!-- Theme Toggle JS -->
+  <script src="assets/js/theme-toggle.js"></script>
+</head>
+<body>
+
+  <!-- Floating Top Navigation Controls -->
+  <div class="auth-controls position-absolute top-0 end-0 p-4 z-3">
+    <div class="nav-actions">
+      <button class="rtl-toggle-btn me-2" aria-label="Toggle language direction">RTL</button>
+      <button class="theme-toggle-btn" aria-label="Toggle visual theme">
+        <svg class="moon-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9 9.75 9.75 0 00-.67-3.4 8.14 8.14 0 01-8.14-8.14A9.75 9.75 0 0012 3z"/></svg>
+        <svg class="sun-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style="display:none;"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zM2 13h2M20 13h2M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M17.66 4.93l-1.41 1.41M4.93 17.66l-1.41 1.41"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Login Form Wrapper -->
+  <main class="page-fade-in">
+    <section class="section-padding bg-surface" style="min-height: 100vh; display: flex; align-items: center;">
+      <div class="container">
+        <div class="auth-box animate-fade-up">
+          <!-- Logo Brand Center -->
+          <div class="text-center mb-4 pb-2 border-bottom" style="border-color: var(--border-color) !important;">
+            <a class="navbar-brand font-headings fw-bold fs-4 d-flex align-items-center justify-content-center" href="index.html" style="color: var(--text-primary); text-decoration: none;">
+              <svg class="brand-icon me-2" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <line x1="12" y1="8" x2="12" y2="16"/>
+                <line x1="9" y1="12" x2="15" y2="12"/>
+              </svg>
+              AURELIUS <span style="color: var(--accent-color);">ADVISORY</span>
+            </a>
+          </div>
+          
+          <h3 class="text-center mb-2">Portal Access</h3>
+          <p class="text-secondary small text-center mb-4">Enter corporate credentials to view strategic diagnostics and assessment dashboard data.</p>
+          
+          <form id="auth-form" class="login-form">
+            <div class="premium-form-group">
+              <label class="premium-form-label" for="login-email">Corporate Email</label>
+              <input type="email" id="login-email" class="premium-form-control" placeholder="executive@firm.com" required>
+            </div>
+            
+            <div class="premium-form-group">
+              <label class="premium-form-label" for="login-password">Security Password</label>
+              <div class="position-relative">
+                <input type="password" id="login-password" class="premium-form-control pe-5" placeholder="••••••••••••" required>
+                <button type="button" class="password-toggle-btn position-absolute end-0 top-50 translate-middle-y border-0 bg-transparent px-3 text-secondary" style="height: 100%; display: flex; align-items: center; justify-content: center;" aria-label="Toggle password visibility">
+                  <svg class="eye-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                  <svg class="eye-off-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="display: none;">
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                    <line x1="1" y1="1" x2="23" y2="23"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <label class="premium-form-check mb-0">
+                <input type="checkbox" id="login-remember" class="premium-form-check-input">
+                <span class="premium-form-check-label">Remember me</span>
+              </label>
+              <a href="#" class="small text-secondary hover-underline" id="forgot-password-link">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-premium btn-premium-primary w-100">Decrypt & Login</button>
+
+            <div class="auth-divider">
+              <span>Or continue with</span>
+            </div>
+
+            <div class="d-flex gap-3">
+              <button type="button" class="btn btn-premium-social w-100 d-flex align-items-center justify-content-center gap-2">
+                <svg width="16" height="16" viewBox="0 0 18 18">
+                  <path fill="#4285F4" d="M17.64 9.2c0-.63-.06-1.25-.16-1.84H9v3.47h4.84a4.14 4.14 0 0 1-1.8 2.71v2.26h2.91c1.7-1.56 2.69-3.86 2.69-6.6z"/>
+                  <path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.2l-2.91-2.26a5.58 5.58 0 0 1-8.08-2.93H1.03v2.33A9 9 0 0 0 9 18z"/>
+                  <path fill="#FBBC05" d="M3.97 10.61a5.4 5.4 0 0 1 0-3.22V5.06H1.03a9 9 0 0 0 0 7.88l2.94-2.33z"/>
+                  <path fill="#EA4335" d="M9 3.58c1.32 0 2.5.45 3.44 1.35L15 2.4A9 9 0 0 0 1.03 5.06l2.94 2.33A5.37 5.37 0 0 1 9 3.58z"/>
+                </svg>
+                Google
+              </button>
+              <button type="button" class="btn btn-premium-social w-100 d-flex align-items-center justify-content-center gap-2">
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="currentColor">
+                  <path d="M15.56 10.1c-.04-2.18 1.78-3.23 1.86-3.28-1.01-1.48-2.58-1.68-3.13-1.72-1.33-.14-2.6.78-3.27.78-.68 0-1.72-.77-2.83-.75-1.46.02-2.8.85-3.55 2.16-1.52 2.64-.39 6.55 1.08 8.68.72 1.04 1.57 2.2 2.7 2.16 1.08-.04 1.49-.7 2.8-.7s1.68.7 2.8.68c1.15-.02 1.9-.1 2.62-1.14.83-1.22 1.17-2.4 1.19-2.46-.02-.02-2.3-.88-2.32-3.48zm-2.42-6.55c.6-.73.98-1.74.88-2.75-.86.03-1.92.57-2.54 1.3-.54.62-.98 1.64-.86 2.63.97.08 1.94-.46 2.52-1.18z"/>
+                </svg>
+                Apple
+              </button>
+            </div>
+          </form>
+          
+          <div class="text-center mt-4">
+            <span class="small text-secondary">Awaiting secure credentials? <a href="signup.html" class="hover-underline">Request Portal Access</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script>
+    document.querySelectorAll('.password-toggle-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const input = button.previousElementSibling;
+        const eyeIcon = button.querySelector('.eye-icon');
+        const eyeOffIcon = button.querySelector('.eye-off-icon');
+        if (input.type === 'password') {
+          input.type = 'text';
+          eyeIcon.style.display = 'none';
+          eyeOffIcon.style.display = 'block';
+        } else {
+          input.type = 'password';
+          eyeIcon.style.display = 'block';
+          eyeOffIcon.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
