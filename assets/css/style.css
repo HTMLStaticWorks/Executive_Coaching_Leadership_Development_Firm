@@ -645,6 +645,30 @@ footer ul li {
   margin-bottom: 0.75rem;
 }
 
+.footer-social-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-social-links a {
+  color: var(--text-secondary) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.footer-social-links a:hover {
+  color: var(--accent-color) !important;
+  transform: translateY(-2px);
+}
+
+.footer-social-links .social-icon {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.5px;
+}
+
 .newsletter-form .premium-form-control {
   background-color: var(--bg-color);
   border-color: var(--border-color);
@@ -901,6 +925,52 @@ footer ul li {
 .footer-logo:hover .brand-icon,
 .auth-box .navbar-brand:hover .brand-icon {
   transform: rotate(-10deg) scale(1.1);
+}
+
+/* Scroll to Top Button Styling */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.scroll-top-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+[data-theme="dark"] .scroll-top-btn {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .scroll-top-btn:hover {
+  background-color: var(--accent-color);
+  color: #0F172A;
+  border-color: var(--accent-color);
 }
 
 

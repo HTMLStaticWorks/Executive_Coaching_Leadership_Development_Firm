@@ -43,3 +43,29 @@
 [data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
   background: #334155;
 }
+
+/* Table Dark Mode Contrast & Premium Styling Fixes */
+[data-theme="dark"] .table {
+  --bs-table-bg: var(--surface-color);
+  --bs-table-color: var(--text-secondary);
+  --bs-table-border-color: var(--border-color);
+  background-color: var(--surface-color) !important;
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="dark"] .table th {
+  background-color: #020617 !important;
+  color: var(--accent-color) !important;
+  border-color: var(--border-color) !important;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .table td {
+  background-color: var(--surface-color) !important;
+  color: var(--text-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .table tbody tr td:first-child {
+  color: var(--text-primary) !important;
+}
