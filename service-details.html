@@ -9,7 +9,7 @@
 
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C59D5F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/%3E%3Cline x1='12' y1='8' x2='12' y2='16'/%3E%3Cline x1='9' y1='12' x2='15' y2='12'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C59D5F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V7L12 2z'/%3E%3Cpath d='M12 6L7 16h10L12 6z'/%3E%3Cpath d='M9 12.5l3-3 3 3'/%3E%3C/svg%3E">
 
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -27,10 +27,10 @@
     <nav class="navbar navbar-expand-xl py-3">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <svg class="brand-icon me-2" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            <line x1="12" y1="8" x2="12" y2="16"/>
-            <line x1="9" y1="12" x2="15" y2="12"/>
+          <svg class="brand-icon me-2" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V7L12 2z" />
+            <path d="M12 6L7 16h10L12 6z" />
+            <path d="M9 12.5l3-3 3 3" />
           </svg>
           AURELIUS <span>ADVISORY</span>
         </a>
@@ -47,6 +47,9 @@
               </ul>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="services.html">Services</a>
             </li>
             <li class="nav-item">
@@ -61,9 +64,21 @@
           </ul>
           
           <div class="nav-actions">
-            <button class="rtl-toggle-btn me-2" aria-label="Toggle language direction">RTL</button><button class="theme-toggle-btn" aria-label="Toggle visual theme">
-              <svg class="moon-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9 9.75 9.75 0 00-.67-3.4 8.14 8.14 0 01-8.14-8.14A9.75 9.75 0 0012 3z"/></svg>
-              <svg class="sun-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style="display:none;"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zM2 13h2M20 13h2M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M17.66 4.93l-1.41 1.41M4.93 17.66l-1.41 1.41"/></svg>
+            <button class="rtl-toggle-btn me-2" aria-label="Toggle language direction">RTL</button>            <button class="theme-toggle-btn" aria-label="Toggle visual theme">
+              <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+              <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+              </svg>
             </button>
             
             <a href="signup.html" class="btn btn-premium btn-premium-primary py-2 px-3">Signup</a>
@@ -73,68 +88,197 @@
     </nav>
   </header>
 
-  <!-- Title Banner -->
+  <!-- Main Deep Dive Content -->
   <main class="page-fade-in">
-    <section class="section-padding" style="background-color: var(--surface-color); border-bottom: 1px solid var(--border-color);">
+    <!-- Header Hero Banner -->
+    <section class="section-padding py-5" style="background-color: var(--surface-color); border-bottom: 1px solid var(--border-color);">
       <div class="container">
-        <div class="row justify-content-center text-center">
+        <div class="row align-items-center">
           <div class="col-lg-8 gsap-fade-up">
-            <span class="hero-subtitle">Capability Deep-Dive</span>
-            <h1>Service Details</h1>
-            <p class="hero-lead">Customizable corporate programs engineered for boards, chief executive officers, and directors looking to optimize structural capability.</p>
+            <nav aria-label="breadcrumb" class="mb-3">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+                <li class="breadcrumb-item"><a href="services.html" class="text-decoration-none text-muted">Services</a></li>
+                <li class="breadcrumb-item active text-primary" aria-current="page">Service Details</li>
+              </ol>
+            </nav>
+            <span class="hero-pill-badge">Capability Deep-Dive</span>
+            <h1 class="mb-3">C-Suite Alignment & Capability Frameworks</h1>
+            <p class="hero-lead text-secondary mb-0">Engineered for Boards of Directors, CEOs, and senior officers seeking to expand leadership capacity and eliminate governance friction.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-4 mt-lg-0 gsap-fade-up">
+            <a href="contact.html" class="btn btn-premium btn-premium-primary px-4 py-3">Initiate Confidential Consultation</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Content Sections -->
+    <!-- Top Key Metrics Bar -->
+    <div class="service-metrics-bar">
+      <div class="container">
+        <div class="row g-3 justify-content-between text-center text-md-start">
+          <div class="col-md-3">
+            <div class="metric-item justify-content-center justify-content-md-start">
+              <span class="fw-bold fs-5 text-primary">6–12</span>
+              <span class="text-secondary small">Months Engagement Scope</span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="metric-item justify-content-center justify-content-md-start">
+              <span class="fw-bold fs-5 text-primary">100%</span>
+              <span class="text-secondary small">Boardroom Confidentiality</span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="metric-item justify-content-center justify-content-md-start">
+              <span class="fw-bold fs-5 text-primary">Hogan</span>
+              <span class="text-secondary small">Validated Diagnostic Suite</span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="metric-item justify-content-center justify-content-md-start">
+              <span class="fw-bold fs-5 text-primary">Quarterly</span>
+              <span class="text-secondary small">Executive Impact Audits</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content with Sticky Index Sidebar -->
     <section class="section-padding">
       <div class="container">
         <div class="row g-5">
-          <div class="col-lg-8 gsap-fade-up">
-            <h3>Strategic Alignment and Capability Map</h3>
-            <p class="mt-3">Operating at the C-Suite level requires a synthesis of commercial foresight, personal communication mastery, and emotional awareness. Our programs construct a custom roadmap built upon baseline assessments.</p>
-            <p>Every initiative begins with multi-directional data aggregation, which is translated by our senior consulting partners into actionable personal metrics.</p>
-            
-            <h4 class="mt-5 mb-4">The Strategic Outcomes</h4>
-            <div class="row g-4">
-              <div class="col-md-6">
-                <div class="glass-card">
-                  <h5>Operational Clarity</h5>
-                  <p class="text-secondary small mb-0">Develop absolute alignment regarding long-term corporate priorities, minimizing internal team drag.</p>
-                </div>
+          <!-- Left Sticky Navigation Sidebar -->
+          <div class="col-lg-4 gsap-fade-up">
+            <div class="sticky-sidebar-nav mb-4">
+              <h5 class="mb-3 font-headings">Section Quick-Index</h5>
+              <div class="nav flex-column gap-1">
+                <a href="#overview" class="sidebar-nav-link active">1. Strategic Overview <span>&rarr;</span></a>
+                <a href="#outcomes" class="sidebar-nav-link">2. Measureable Outcomes <span>&rarr;</span></a>
+                <a href="#deliverables" class="sidebar-nav-link">3. Key Deliverables <span>&rarr;</span></a>
+                <a href="#faqs" class="sidebar-nav-link">4. Board FAQs <span>&rarr;</span></a>
               </div>
-              <div class="col-md-6">
-                <div class="glass-card">
-                  <h5>Governance Protection</h5>
-                  <p class="text-secondary small mb-0">Establish structural safeguards, succession plans, and Board reporting procedures to satisfy compliance.</p>
-                </div>
+              <hr class="my-4" style="border-color: var(--border-color);">
+              <div class="p-3 rounded-3 text-center" style="background: var(--bg-color); border: 1px solid var(--border-color);">
+                <span class="text-muted small uppercase tracking d-block mb-1">Direct Liaison</span>
+                <strong class="d-block mb-2">Senior Managing Partner</strong>
+                <a href="contact.html" class="btn btn-sm btn-outline-primary w-100">Schedule Briefing</a>
               </div>
             </div>
           </div>
-          
-          <div class="col-lg-3 offset-lg-1 gsap-fade-up">
-            <div class="glass-card p-4">
-              <h4 class="mb-4">Program Inclusions</h4>
-              <ul class="list-unstyled">
-                <li class="mb-3 border-bottom pb-2">
-                  <strong>Duration</strong>
-                  <div class="text-secondary small">Typically 6 to 12 Months</div>
-                </li>
-                <li class="mb-3 border-bottom pb-2">
-                  <strong>Assessments Included</strong>
-                  <div class="text-secondary small">Scientific 360 Feedback & Hogans</div>
-                </li>
-                <li class="mb-3 border-bottom pb-2">
-                  <strong>Board Reporting</strong>
-                  <div class="text-secondary small">Optional quarterly brief deliverables</div>
-                </li>
-                <li class="mb-3">
-                  <strong>Interaction Format</strong>
-                  <div class="text-secondary small">In-person summits + digital checkpoints</div>
-                </li>
-              </ul>
-              <a href="contact.html" class="btn btn-premium btn-premium-primary w-100 mt-4">Inquire For Program</a>
+
+          <!-- Right Content Area -->
+          <div class="col-lg-8 gsap-fade-up">
+            <!-- Overview Section -->
+            <div id="overview" class="mb-5 pb-4 border-bottom" style="border-color: var(--border-color) !important;">
+              <h3>1. Strategic Alignment & Capability Mapping</h3>
+              <p class="mt-3 text-secondary">Operating at the C-Suite level requires a synthesis of commercial foresight, personal communication mastery, and emotional awareness. Our programs construct a custom roadmap built upon baseline psychometrics and qualitative stakeholder diagnostics.</p>
+              <p class="text-secondary">Every initiative begins with multi-directional data aggregation, which is translated by our senior consulting partners into actionable personal metrics and board reporting metrics.</p>
+            </div>
+
+            <!-- Outcomes Grid Section -->
+            <div id="outcomes" class="mb-5 pb-4 border-bottom" style="border-color: var(--border-color) !important;">
+              <h3 class="mb-4">2. Measurable Strategic Outcomes</h3>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="glass-card p-4 h-100">
+                    <div class="badge bg-soft-primary text-primary mb-3">Governance</div>
+                    <h5>Operational Alignment</h5>
+                    <p class="text-secondary small mb-0">Develop absolute clarity regarding long-term corporate priorities, minimizing internal executive team drag and decision paralysis.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="glass-card p-4 h-100">
+                    <div class="badge bg-soft-primary text-primary mb-3">Continuity</div>
+                    <h5>Governance Protection</h5>
+                    <p class="text-secondary small mb-0">Establish structural safeguards, succession readiness maps, and Board reporting procedures to satisfy institutional compliance.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="glass-card p-4 h-100">
+                    <div class="badge bg-soft-primary text-primary mb-3">Performance</div>
+                    <h5>Executive Capacity</h5>
+                    <p class="text-secondary small mb-0">Expand emotional resilience, communication influence, and strategic decision velocity under severe corporate pressure.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="glass-card p-4 h-100">
+                    <div class="badge bg-soft-primary text-primary mb-3">Culture</div>
+                    <h5>Culture Velocity</h5>
+                    <p class="text-secondary small mb-0">Cascade behavioral alignment across VP and Director tiers, fostering accountability and transparent commercial execution.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Deliverables Section -->
+            <div id="deliverables" class="mb-5 pb-4 border-bottom" style="border-color: var(--border-color) !important;">
+              <h3 class="mb-4">3. Program Deliverables & Artifacts</h3>
+              <div class="p-4 rounded-4" style="background: var(--surface-color); border: 1px solid var(--border-color);">
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex align-items-start gap-3 mb-3 pb-3 border-bottom" style="border-color: var(--border-color) !important;">
+                    <span class="text-primary fw-bold">&check;</span>
+                    <div>
+                      <strong class="d-block">Hogan Leadership Forecast & Derailer Report</strong>
+                      <span class="text-secondary small">Clinical psychometric profiling highlighting performance drivers, values, and stress-response blind spots.</span>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-start gap-3 mb-3 pb-3 border-bottom" style="border-color: var(--border-color) !important;">
+                    <span class="text-primary fw-bold">&check;</span>
+                    <div>
+                      <strong class="d-block">Confidential Qualitative 360 Diagnostic Synthesis</strong>
+                      <span class="text-secondary small">Structured interviews with Board members, peers, and direct reports aggregated into an anonymized thematic briefing.</span>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-start gap-3 mb-3 pb-3 border-bottom" style="border-color: var(--border-color) !important;">
+                    <span class="text-primary fw-bold">&check;</span>
+                    <div>
+                      <strong class="d-block">Behavioral Leadership Architecture Roadmap</strong>
+                      <span class="text-secondary small">Custom quarterly milestones tied directly to commercial KPIs, M&A integrations, or Board governance goals.</span>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-start gap-3">
+                    <span class="text-primary fw-bold">&check;</span>
+                    <div>
+                      <strong class="d-block">Quarterly Board & Nominations Committee Briefings</strong>
+                      <span class="text-secondary small">Executive summary briefs documenting growth metrics and institutional succession readiness.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Board FAQs Section -->
+            <div id="faqs">
+              <h3 class="mb-4">4. Frequently Asked Questions</h3>
+              <div class="accordion" id="serviceDetailsFAQ">
+                <div class="accordion-item mb-3 rounded-3 overflow-hidden" style="background: var(--surface-color); border: 1px solid var(--border-color);">
+                  <h2 class="accordion-header" id="faqHeadingOne">
+                    <button class="accordion-button collapsed font-headings" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="false" aria-label="Toggle FAQ answer">
+                      How is executive confidentiality maintained during Board reporting?
+                    </button>
+                  </h2>
+                  <div id="faqCollapseOne" class="accordion-collapse collapse" data-bs-parent="#serviceDetailsFAQ">
+                    <div class="accordion-body text-secondary small">
+                      All 1:1 advisory sessions are strictly confidential between the officer and the managing partner. Board reporting focuses exclusively on objective behavioral milestone completion and organizational alignment metrics.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item mb-3 rounded-3 overflow-hidden" style="background: var(--surface-color); border: 1px solid var(--border-color);">
+                  <h2 class="accordion-header" id="faqHeadingTwo">
+                    <button class="accordion-button collapsed font-headings" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-label="Toggle FAQ answer">
+                      What is the typical time commitment required from executive participants?
+                    </button>
+                  </h2>
+                  <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#serviceDetailsFAQ">
+                    <div class="accordion-body text-secondary small">
+                      Engagements are designed to integrate seamlessly into high-volume executive schedules, typically requiring two 90-minute monthly sessions plus real-time on-call availability for pressing strategic dilemmas.
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -148,10 +292,10 @@
       <div class="row g-5 mb-5">
         <div class="col-lg-4 col-md-6">
           <div class="footer-logo mb-3 d-flex align-items-center">
-            <svg class="brand-icon me-2" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              <line x1="12" y1="8" x2="12" y2="16"/>
-              <line x1="9" y1="12" x2="15" y2="12"/>
+            <svg class="brand-icon me-2" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V7L12 2z" />
+              <path d="M12 6L7 16h10L12 6z" />
+              <path d="M9 12.5l3-3 3 3" />
             </svg>
             AURELIUS <span>ADVISORY</span>
           </div>

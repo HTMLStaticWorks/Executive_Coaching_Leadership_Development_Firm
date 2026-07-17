@@ -162,20 +162,35 @@ header.sticky-header {
 }
 
 .theme-toggle-btn {
-  background: none;
-  border: none;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
   cursor: pointer;
   color: var(--text-primary);
-  font-size: 1.2rem;
-  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color var(--transition-speed) ease;
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .theme-toggle-btn:hover {
   color: var(--accent-color);
+  border-color: var(--accent-color);
+  background: var(--bg-color);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(197, 157, 95, 0.18);
+}
+
+.theme-toggle-btn svg {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.theme-toggle-btn:hover svg {
+  transform: rotate(15deg) scale(1.08);
 }
 
 .rtl-toggle-btn {
@@ -450,14 +465,16 @@ header.sticky-header {
 }
 
 .case-study-img-wrapper {
-  height: 250px;
+  height: 260px;
   overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .case-study-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 25%;
   transition: transform 0.5s ease;
 }
 
@@ -963,6 +980,259 @@ footer ul li {
   transform: translateY(0);
 }
 
+/* ==========================================
+   DISTINCT PAGE LAYOUT & COMPONENT STYLES
+   ========================================== */
+
+/* Asymmetric Hero Layout */
+.services-hero {
+  padding: 5rem 0 4rem;
+  background: linear-gradient(135deg, var(--surface-color) 0%, var(--bg-color) 100%);
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-pill-badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  background: rgba(197, 157, 95, 0.12);
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(197, 157, 95, 0.25);
+}
+
+.hero-stats-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  font-size: 0.88rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+/* Floating KPI Card */
+.hero-image-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.floating-kpi-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  z-index: 2;
+  backdrop-filter: blur(10px);
+}
+
+/* Asymmetric Z-Pattern Alternating Pillar Rows */
+.pillar-z-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  height: 100%;
+}
+
+.pillar-z-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  border-color: var(--accent-color);
+}
+
+.pillar-number-badge {
+  font-family: var(--font-headings);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  opacity: 0.8;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.feature-tag {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-right: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Horizontal Process Track */
+.process-track-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .process-track-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .process-track-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.process-step-item {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.process-step-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+}
+
+.process-step-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-color) 0%, #a37c40 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 12px rgba(197, 157, 95, 0.3);
+}
+
+/* Pricing / Engagement Tier Cards */
+.pricing-tier-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-tier-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.pricing-tier-popular {
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 10px 30px rgba(197, 157, 95, 0.15);
+}
+
+.tier-badge {
+  position: absolute;
+  top: -14px;
+  right: 24px;
+  background: var(--accent-color);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+}
+
+/* Sector Cards */
+.sector-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.sector-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-color);
+}
+
+.sector-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(197, 157, 95, 0.1);
+  color: var(--accent-color);
+  border-radius: 10px;
+}
+
+/* Service Details Header Metrics Bar & Sticky Nav */
+.service-metrics-bar {
+  background: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+}
+
+.metric-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sticky-sidebar-nav {
+  position: sticky;
+  top: 100px;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.sidebar-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: all 0.2s ease;
+}
+
+.sidebar-nav-link:hover,
+.sidebar-nav-link.active {
+  background: rgba(197, 157, 95, 0.12);
+  color: var(--accent-color);
+}
+
 [data-theme="dark"] .scroll-top-btn {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
@@ -971,6 +1241,73 @@ footer ul li {
   background-color: var(--accent-color);
   color: #0F172A;
   border-color: var(--accent-color);
+}
+
+/* Mobile Navbar Absolute Overlay Fix (Prevents Hero Section Shift on Hamburger Toggle) */
+@media (max-width: 1199.98px) {
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+  }
+
+  .sticky-header .navbar {
+    position: relative;
+  }
+
+  .sticky-header .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 1.75rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    z-index: 1050;
+  }
+
+  .sticky-header .navbar-nav {
+    margin-bottom: 1.25rem !important;
+  }
+
+  .sticky-header .nav-actions {
+    justify-content: flex-start;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+  }
+}
+
+/* Home 2 Hero Spacing & Responsive Image Container Fix */
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding: 4.5rem 0 3.5rem;
+  }
+
+  .hero-portrait-container {
+    height: 380px;
+    max-width: 100%;
+  }
+
+  .hero-portrait-accent {
+    top: 10px;
+    right: -10px;
+    left: auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-section {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .hero-portrait-container {
+    height: 280px;
+  }
+
+  .hero-portrait-accent {
+    display: none;
+  }
 }
 
 
