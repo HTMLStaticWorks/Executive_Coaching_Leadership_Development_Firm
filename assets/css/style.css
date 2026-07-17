@@ -1310,6 +1310,70 @@ footer ul li {
   }
 }
 
+/* Ensure hero buttons are of similar full width on small mobile screens (e.g. 360px) */
+@media (max-width: 480px) {
+  .home2-hero-btns {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .home2-hero-btns .btn {
+    width: 100% !important;
+    text-align: center;
+  }
+}
+
+/* About Hero Stats responsive alignment and border cleanup on mobile */
+.about-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-hero-stats .stat-item {
+  text-align: center;
+}
+
+.about-hero-stats .stat-item.border-start {
+  border-left: 1px solid var(--border-color) !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-right: none !important;
+  padding-left: 2rem !important;
+}
+
+@media (max-width: 575.98px) {
+  .about-hero-stats {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  
+  .about-hero-stats .stat-item.border-start {
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
+}
+
+/* Custom button overrides within bg-dark-accent sections to prevent blending/contrast issues */
+.bg-dark-accent .btn-premium-secondary {
+  border-color: #FFFFFF !important;
+  color: #FFFFFF !important;
+  background-color: transparent;
+}
+
+.bg-dark-accent .btn-premium-secondary:hover {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  border-color: #FFFFFF !important;
+}
+
+.bg-dark-accent .btn-premium-accent:hover {
+  background-color: transparent !important;
+  color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+}
+
 
 
 
