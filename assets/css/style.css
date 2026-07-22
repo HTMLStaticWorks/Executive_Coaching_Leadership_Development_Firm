@@ -104,16 +104,35 @@ header.sticky-header {
   transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
 }
 
-.navbar-brand {
-  font-family: var(--font-headings);
-  font-weight: 500;
-  font-size: 1.5rem;
+.navbar-brand,
+.footer-logo,
+.brand-logo,
+footer .footer-logo,
+.auth-box .brand-logo,
+.auth-box .navbar-brand {
+  font-family: var(--font-headings) !important;
+  font-weight: 700 !important;
+  font-size: 1.4rem !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.04em !important;
   color: var(--text-primary) !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
 }
 
-.navbar-brand span {
-  color: var(--accent-color);
+.navbar-brand span,
+.footer-logo span,
+.brand-logo span,
+footer .footer-logo span,
+.auth-box .brand-logo span,
+.auth-box .navbar-brand span {
+  color: var(--accent-color) !important;
+  font-weight: 700 !important;
+  margin-left: 0.35rem !important;
 }
+
+
 
 .nav-link {
   font-family: var(--font-body);
@@ -933,16 +952,22 @@ footer ul li {
 
 /* Brand Icon Styles & Animations */
 .brand-icon {
-  color: var(--accent-color);
-  flex-shrink: 0;
-  transition: transform var(--transition-speed) ease;
+  width: 24px !important;
+  height: 24px !important;
+  color: var(--accent-color) !important;
+  flex-shrink: 0 !important;
+  margin-right: 0.5rem !important;
+  transition: transform var(--transition-speed) ease !important;
 }
+
 
 .navbar-brand:hover .brand-icon,
 .footer-logo:hover .brand-icon,
+.brand-logo:hover .brand-icon,
 .auth-box .navbar-brand:hover .brand-icon {
   transform: rotate(-10deg) scale(1.1);
 }
+
 
 /* Scroll to Top Button Styling */
 .scroll-top-btn {
@@ -1373,6 +1398,16 @@ footer ul li {
   color: var(--accent-color) !important;
   border-color: var(--accent-color) !important;
 }
+
+/* Typography Utility Classes */
+.uppercase {
+  text-transform: uppercase;
+}
+
+.tracking {
+  letter-spacing: 0.1em;
+}
+
 
 
 

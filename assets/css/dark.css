@@ -69,3 +69,13 @@
 [data-theme="dark"] .table tbody tr td:first-child {
   color: var(--text-primary) !important;
 }
+
+/* Dark Mode Text & Secondary Subtitle Contrast Fixes */
+[data-theme="dark"] .text-muted {
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .text-secondary {
+  color: #CBD5E1 !important;
+}
+
